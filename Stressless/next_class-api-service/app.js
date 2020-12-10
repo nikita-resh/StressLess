@@ -11,6 +11,7 @@ const exphbs  = require('express-handlebars');
 
 const routes = require('./routes/index');
 const nextClass = require('./routes/nextClass');
+const nextClassRender = require('./routes/nextClassRender');
 
 const app = express();
 
@@ -38,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/api/v1/nextClass', nextClass);
+app.use('/nextClass', nextClassRender);
 
 /// catch 404 and forward to error handler
 app.use((req, res, next) => {
