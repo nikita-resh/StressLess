@@ -3,7 +3,7 @@
 
 module.exports = {
     apps : [{
-    name: 'st-readiness',
+    name: 'str-activity',
     script: './bin/www',
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     exec_mode: 'cluster',
@@ -14,14 +14,15 @@ module.exports = {
     out_file : "logs/out.log",
     merge_logs: true,
     env: {
-        PORT: 3002,
+        PORT: 3000,
         NODE_ENV: "development",
         NODE_OPTIONS: "--inspect --inspect-port=9232"
         },   
     env_production: {
     NODE_ENV: 'production',
     autorestart: false,
-    PORT: 3002
+    PORT: 3000
     }
     }]
     };
+    
