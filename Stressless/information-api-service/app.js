@@ -40,7 +40,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/api/v1/information', information);
 app.use('/information', informationRender );
- 
+
+  
 /// catch 404 and forward to error handler
 app.use((req, res, next) => {
     const err = new Error('Not Found');

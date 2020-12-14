@@ -1,5 +1,4 @@
 FROM keymetrics/pm2
-
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -19,3 +18,4 @@ COPY . .
 EXPOSE 3000
 #CMD [ "node", "./bin/www" ]
 CMD [ "pm2-runtime", "start", "ecosystem.config.js", "--env", "production" ]
+

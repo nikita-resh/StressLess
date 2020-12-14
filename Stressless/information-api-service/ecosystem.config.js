@@ -3,7 +3,7 @@
 
 module.exports = {
     apps : [{
-    name: 'st-readiness',
+    name: 'stm-information',
     script: './bin/www',
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     exec_mode: 'cluster',
