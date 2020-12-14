@@ -10,26 +10,34 @@ jsf.extend('faker', () => faker);
 var schema = {
 	"type": "array",
 	"minItems": 1,
-	"maxItems": 5,
+	"maxItems": 2,
 	"items":{
 		type:'object',
-		properties: {
-			 name: {
-		          type: 'string',
-		          faker: 'name.firstName'
-       		 },
-       		 sName: {
-		          type: 'string',
-		          faker: 'name.lastName'
-       		 },
-       		 date: {
-       		 	type:'string',
-       		 	faker: 'date.recent'
-       		 },
-       		 text: {
-       		 	type:'string',
-       		 	chance: 'paragraph'
-       		 }
+		properties: 
+		{
+			subject:
+			{
+				"type": "string",
+				"enum":
+				[
+					"Алгебра",
+					"Геометрия",
+					"Math",
+					"English"
+				]
+            },
+            day:
+            {
+                "type": "string",
+				"enum":
+				[
+					"Понедельник",
+					"Вторник",
+					"Среда",
+                    "Четверг",
+                    "Пятница"
+				]
+            }
 		},
 		 required: ['name', 'sName', 'date', 'text']
 	}
