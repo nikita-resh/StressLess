@@ -1,5 +1,6 @@
 <div>
 	{% for k, v in pairs(items) do %}
-		<li>{{v["name"]}}</li>
+		<li>{{v["name"]}} {{v["sName"]}}</li>
+		<li>{{v["status"]}}</li>
 	{% end %}
 </div>

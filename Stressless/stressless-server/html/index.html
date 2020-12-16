@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to Stressless</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
-<body>
-<h1>Welcome to Stressless</h1>
-<p>Date: <!--# echo var="date_local"--><p>
-<p>test lua/ssi: <!--# include virtual="/activity"--></p>
-
-
-
-</body>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>StressLess</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+        </header>
+        <div class="main">
+            <nav>
+                <ul>
+                    <li><a href="Discip.html"><span>Дисциплины</span></a></li>
+                    <li><a href="Repet.html">Репетиторы</a></li>
+                </ul>
+            </nav>
+            <div class="balance"><p>Баланс: 42 рубля</p></div>
+            <div class="info">
+                <img src="img/profile.png" alt="Аватарка">
+                <p><b>ФИО</b></p>
+                <p>Date: <!--# echo var="date_local"--><p>
+                <p><b>Статус:</b> ученик/учитель</p>
+                <p><b>Изучаемые дисциплины:</b> матанализ, аналитическая геометрия, методы программирования</p>
+                <p>Имя пользователя: <!--# include virtual="/activity"--></p>
+                <img src="img/Bell.png" alt="Уведомления">
+            </div>
+        </div>
+    </body>
 </html>
