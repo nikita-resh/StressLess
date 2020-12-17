@@ -10,7 +10,7 @@ jsf.extend('faker', () => faker);
 var schema = {
   "type": "array",
   "minItems": 1,
-  "maxItems": 4,
+  "maxItems": 2,
   "items":{
     type:'object',
     properties: {
