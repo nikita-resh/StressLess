@@ -21,8 +21,8 @@ var schema = {
 				"type": "string",
 				"enum":
 				[
-					"Алгебра",
-					"Геометрия",
+					"Algebra",
+					"Geometry",
 					"Math",
 					"English"
 				]
@@ -32,11 +32,11 @@ var schema = {
                 "type": "string",
 				"enum":
 				[
-					"Понедельник",
-					"Вторник",
-					"Среда",
-                    "Четверг",
-                    "Пятница"
+					"Monday",
+					"Tuesday",
+					"Wednesday",
+                    "Thursday",
+                    "Friday"
 				]
             }
 		},
