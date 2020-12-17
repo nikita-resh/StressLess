@@ -25,7 +25,6 @@ var schema = {
            status: {
               "type": "string",
               "pattern": "online|offline"
-
            }   
     },
      required: ['name','sName','status']
