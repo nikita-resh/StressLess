@@ -4,3 +4,6 @@ Express server listening on port 3000
 [0mGET /favicon.ico [33m404[0m 9.119 ms - 253[0m
 [0mGET / [36m304[0m 2.426 ms - -[0m
 [0mGET /css/style.css [36m304[0m 2.000 ms - -[0m
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
