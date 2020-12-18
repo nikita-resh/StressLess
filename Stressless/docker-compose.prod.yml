@@ -1,0 +1,94 @@
+version: "3.7"
+services:
+  str-activity:
+    build:
+      context: activity-api-service
+      dockerfile: Dockerfile
+    networks:
+      private:
+        # the aliases are not required, but are useful if the applications want to internally
+        # reference each other by host name
+        aliases:
+          - "str-activity"
+      public:
+    ports:
+      - "9925:3000"
+
+  str-info:
+    build:
+      context: information-api-service
+      dockerfile: Dockerfile
+    networks:
+      private:
+        # the aliases are not required, but are useful if the applications want to internally
+        # reference each other by host name
+        aliases:
+          - "str-info"
+      public:
+    ports:
+      - "9926:3000"
+  
+  str-next:
+    build:
+      context: next_class-api-service
+      dockerfile: Dockerfile
+    networks:
+      private:
+        # the aliases are not required, but are useful if the applications want to internally
+        # reference each other by host name
+        aliases:
+          - "str-next"
+      public:
+    ports:
+      - "9927:3000"
+
+  str-wallets:
+    build:
+      context: wallets-api-service
+      dockerfile: Dockerfile
+    networks:
+      private:
+        # the aliases are not required, but are useful if the applications want to internally
+        # reference each other by host name
+        aliases:
+          - "str-wallets"
+      public:
+    ports:
+      - "9928:3000"
+
+
+  str-nginx:
+    build:
+      context: stressless-server
+      dockerfile: Dockerfile
+    depends_on:
+      - "str-activity"
+      - "str-info"
+      - "str-next"
+      - "str-wallets"
+    networks:
+      private:
+        # the aliases are not required, but are useful if the applications want to internally
+        # reference each other by host name
+        aliases:
+          - "str-nginx"
+      public:
+    ports:
+      - "9924:80"
+
+    # volumes are commented due to manual copy in circle config.xml
+    volumes:
+      - /home/core/shared/prod/stressless-server/html:/usr/local/openresty/nginx/html
+      - /home/core/shared/prod/stressless-server/templates:/usr/local/openresty/nginx/templates
+      - /home/core/shared/prod/stressless-server/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - /home/core/shared/prod/stressless-server/conf/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+
+      # this differs from a normal -v folder mount to maintaine with/out traefik
+      # - ./fp-server/conf/conf.d/default-traefik.conf:/etc/nginx/conf.d/default.conf
+
+networks:
+  # everything that is *only* on "internal network" cannot talk to WAN
+  private:
+    internal: true
+  # add this network to a container to make it talk to the rest of the world
+  public:
