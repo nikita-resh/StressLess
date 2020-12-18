@@ -1,0 +1,12 @@
+Express server listening on port 3000
+[0mGET / [32m200[0m 24.895 ms - 291[0m
+[0mGET /css/style.css [32m200[0m 2.756 ms - 117[0m
+[0mGET /favicon.ico [33m404[0m 4.095 ms - 253[0m
+[0mGET / [36m304[0m 1.185 ms - -[0m
+[0mGET /css/style.css [36m304[0m 0.668 ms - -[0m
+[0mGET / [36m304[0m 0.976 ms - -[0m
+[0mGET /css/style.css [36m304[0m 0.608 ms - -[0m
+[0mGET / [36m304[0m 0.862 ms - -[0m
+[0mGET /css/style.css [36m304[0m 0.583 ms - -[0m
+[0mGET / [36m304[0m 0.983 ms - -[0m
+[0mGET /css/style.css [36m304[0m 0.342 ms - -[0m

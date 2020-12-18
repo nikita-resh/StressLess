@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>StressLess</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <style>
+			*{
+			    margin: 0;
+			    padding: 0;
+			    font-family: 'Montserrat', sans-serif;
+			}
+			body{
+			    background-color: black;
+			}
+			.main{
+				margin: 50px auto;
+				width: 57%;
+			}
+			.info,nav,.balance{
+				display: inline-block;
+			    border: 2px solid black;
+			    border-radius: 30px;
+			    background-color: #E0E0E0;			    
+			}
+			.info{
+				margin-left:2%;
+				height: 500px;	
+				width: 60%;
+				position: relative;
+			}	
+			nav{
+				float:left;
+				height: 500px;
+			}
+			.balance{
+				float:right;
+				width:10%;				
+			}
+			nav{
+				width:20%;
+			}
+			nav ul{
+				list-style: none;
+			}
+			nav li a{
+				text-decoration: none;
+				color:black;
+			}
+			li{
+				font-size: 18px;
+				font-weight: 600;
+			}
+			span{
+				font-size: 29px;
+				font-weight: bold;				
+			}
+			.status{
+				font-weight: 500;
+			}
+			.bell{
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 60px;
+				height: 60px;
+			}
+			.ava{
+				width:200px;
+				height: 200px;
+				margin: 10px;
+			}
+			.balance p{
+				padding-top: 12px;
+				text-align:center;
+				font-size: 29px;
+				font-weight: bold;	
+			}
+			nav li a:hover{
+				color: #F76666;
+				border-right: 2px solid #F76666;
+				padding-right:9px; 
+			}
+        </style>
+    </head>
+    <body>
+        <header>
+        </header>
+        <div class="main">
+            <nav>
+                <ul>
+                    <li><span>Subjects</span></li>
+                    <li><a href="#">Geometry</a></li>
+                    <li><a href="#">Algebra</a></li>
+                    <li><a href="#">Math.analysis</a></li>
+                </ul>
+                <ul>
+                    <li><span>Tutors</span></li>
+                    <!--# include virtual="/activity"-->
+                </ul>
+            </nav>
+            <div class="info">
+                <img src="img/profile.png" alt="Аватарка" class="ava">
+                <!--ДАША-->
+                <!--НИКИТА-->
+                <img src="img/Bell.png" alt="Уведомления" class="bell">     
+            </div>
+            <div class="balance"><p>＄<!--СТЁПА--></p></div> 
+        </div>
+    </body>
+</html>
